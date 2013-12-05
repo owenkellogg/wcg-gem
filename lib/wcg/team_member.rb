@@ -2,7 +2,7 @@ module Wcg
   class TeamMember
     attr_reader :name, :id, :run_time, :points, :url
     def initialize(params)
-      @id = params[:id]
+      @id = params[:id].to_i
       @name = params[:name]
       @run_time = params[:run_time].to_i
       @points = params[:points].to_i
