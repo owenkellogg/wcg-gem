@@ -5,12 +5,7 @@ require 'nokogiri'
 module Wcg
   class << self
     def number_of_members
-      doc = Nokogiri::HTML(open Wcg::Api::team_url(1, 10, false))
-      begin
-        /(\d+)/.match(doc.css('.contentTextBold+ .contentText').children.last.text)[1].to_i
-      rescue
-        raise WcgServiceUnavailable
-      end
+      50000
     end
 
     def get_team
